@@ -1,0 +1,31 @@
+<div class="container wrapper wrapper2">
+    <div class="row">
+        <!-- Form -->
+        <div class="col-md-12">
+            <h3 class="text-center bg-info text-capitalize fw-bold">Formulaire d'ajout d'une personne</h3>
+            <form [formGroup]="personneForm" method="post" (ngSubmit)="submitForm()" novalidate>
+                <div class="form-group">
+                    <label for="firstName" class="text-capitalize fw-bold">Prénom</label>
+                    <input type="text" formControlName="firstName" id="firstName" class="form-control short-input">
+                </div>
+                <div class="form-group">
+                    <label for="lastName" class="text-capitalize fw-bold">Nom</label>
+                    <input type="text" formControlName="lastName" id="lastName" class="form-control short-input">
+                </div>
+                <div class="form-group">
+                    <label for="address" class="text-capitalize fw-bold">Adresse</label>
+                    <input type="text" formControlName="address" id="address" class="form-control short-input">
+                </div>
+                <div class="form-group">
+                    <label for="birthDay" class="text-capitalize fw-bold">Date de naissance</label>
+                    <input type="date" formControlName="birthDay" id="birthDay" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="phone" class="text-capitalize fw-bold">Numéro de téléphone</label>
+                    <input type="text" formControlName="phone" id="phone" class="form-control short-input">
+                </div>
+                <button type="submit" class="btn btn-primary mt-2">Envoyer</button>
+            </form>
+        </div>
+    </div>
+</div>
